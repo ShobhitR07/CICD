@@ -1,0 +1,40 @@
+ec2-->jenkins-master-->ubuntu
+
+go to jenkins master
+
+INSTALL JAVA---------------------------------------------------------------
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java -version
+
+INSTALL JENKINS------------------------------------------------------------
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install jenkins
+
+
+CHECK JENKINS---------------------------------------------------------------
+sudo apt-get install jenkins
+
+WHEN SYSTEM RESTARTS JENKINS RESTART----------------------------------------
+sudo systemctl enable jenkins
+
+
+OPEN PORT 8080 OF YOUR IP AND ACCESS JENKINS--------------------------------
+
+
+GET PASSWORD FOR ACCESSING JENKINS-------------------------------------------
+sudo cat {path}
+
+
+
+
+
+
