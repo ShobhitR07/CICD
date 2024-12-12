@@ -1,0 +1,20 @@
+INSTALL JAVA IN AGENT-------
+sudo apt install fontconfig openjdk-17-jre
+java -version
+
+
+CONNECT AGENT WITH MASTER--------
+
+IN THE MASTER GENERATE KEYS---
+cd ~/.ssh
+ssh-keygen
+(store private key at master)
+
+TRANSFER PRIVATE KEY TO AGENT-----------
+cat {keyname}.pub
+
+cd .ssh/
+vim authorized_keys
+insert the public key there and save it
+
+
